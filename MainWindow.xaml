@@ -1,0 +1,36 @@
+﻿<Window x:Class="CreditorReferenceGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CreditorReferenceGenerator"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="TomasiDeveloping" Height="450" Width="800" WindowStyle="SingleBorderWindow" >
+
+
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Background="#FF6D6D6D" Height="90" Orientation="Vertical">
+            <Label FontWeight="Bold" FontSize="20" Content="Creditor Reference Generator" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+        </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,20,0,0">
+                <Label Width="120" Height="Auto" Margin="0,30,0,0" Content="Referenz Nummer:" HorizontalAlignment="Center" />
+                <TextBox TextWrapping="Wrap" Text="" x:Name="UserInput" Width="200" Height="25" Margin="0,5,0,20" HorizontalAlignment="Center" VerticalContentAlignment="Center" />
+                <Button Background="#FF5757E4" Content="Generieren" Width="150" Height="30" Click="OnGenerateClick" HorizontalAlignment="Center" />
+                <Label Content="" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="500" Margin="0,20,0,20" Height="30" x:Name="ErrorLabel" Foreground="Red" VerticalContentAlignment="Center"></Label>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label FontWeight="Bold" Background="#FFAFABAB" Content="RF:" Width="30" Height="30" Margin="0,0,0,0" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBox Text="" x:Name="ResultBox" Width="200" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </StackPanel>
+       
+    </Grid>
+</Window>
